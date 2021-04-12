@@ -1,7 +1,7 @@
 # hanjis
 
-hanyjiz ew chingfliy kahf siuzchipp
+CC0 1.0 Universal. See LICENSE for details.
 
 ### taipa
 
-taipa library is released under the MIT license.
+Taipa library is released under the MIT license.

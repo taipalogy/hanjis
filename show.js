@@ -1,21 +1,23 @@
-const cli = new taipa.Client();
-
+const cli = new Taipa.Client();
 
 function showHanjis(str) {
-  const seqs = cli.processTonal(str).soundSequences
-  const initialLetter = seqs[0][0].toString()
-  const names = Object.getOwnPropertyNames(obj[initialLetter])
-  
-  if(names.includes(str)) {
-    for(const prop in obj) {
-      if(prop === initialLetter) {
-        const value = obj[prop][str]
-        document.write("<span style='font-family:georgia;font-size:36px'>" + value + "</span>")
+  const seqs = cli.processTonal(str).soundSequences;
+  const initialLetter = seqs[0][0].toString();
+  const names = Object.getOwnPropertyNames(obj[initialLetter]);
+
+  if (names.includes(str)) {
+    for (const prop in obj) {
+      if (prop === initialLetter) {
+        const value = obj[prop][str];
+        document.write(
+          "<span style='font-family:georgia;font-size:36px'>" +
+            value +
+            '</span>'
+        );
       }
     }
-  }        
+  }
 }
-
 
 function showWord(str) {
   const seqs = cli.processTonal(str).soundSequences;
@@ -25,8 +27,8 @@ function showWord(str) {
   let text = '';
   for (let i = 0; i < sounds.length; i++) {
     if (
-      sounds[i] === taipa.TonalSoundTags.freeTone ||
-      sounds[i] === taipa.TonalSoundTags.checkedTone
+      sounds[i] === Taipa.TonalSoundTags.freeTone ||
+      sounds[i] === Taipa.TonalSoundTags.checkedTone
     ) {
       text =
         text +
